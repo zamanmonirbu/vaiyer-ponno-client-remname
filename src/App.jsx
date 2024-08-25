@@ -6,6 +6,9 @@ import Dashboard from './pages/Dashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
+import UserProfile from './components/UserProfile';
+import ViewFilterProducts from './components/Filter/ViewFilterProducts';
+import ProductView from './components/Product/ProductView';
 
 const App = () => {
     return (
@@ -15,6 +18,9 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/register" element={<RegisterForm />} />
                 <Route path="/login" element={<LoginForm />} />
+                <Route path="/filter/product" element={<ViewFilterProducts/>} />
+                <Route path="/user/profile" element={<UserProfile/>} />
+                <Route path="/product/view" element={<ProductView/>} />
 
                 {/* Private Routes for Users */}
                 <Route element={<PrivateRoute />}>
